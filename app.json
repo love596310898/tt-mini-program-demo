@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/create/create",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "投票小助手",
+    "navigationBarTextStyle":"black"
+  }
+}

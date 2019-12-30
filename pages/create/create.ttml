@@ -1,0 +1,40 @@
+<view class="wrap bg-grey">
+    <view class="container">
+        <view class="titele-and-description bg-white">
+            <view class="title size-18">
+                <input placeholder="投票标题" focus="{{titleFocus}}" maxlength="100" value="{{form.title}}" bindinput="enterText" data-key="form.title"/>
+            </view>
+            <view class="description size-15">
+                <input placeholder="投票描述（选填）" maxlength="500" value="{{form.memo}}" bindinput="enterText" data-key="form.memo"/>
+            </view>
+        </view>
+        <view class="options bg-white size-15">
+            <view class="option flex-row" tt:for="{{form.options}}">
+                <view class="iconfont iconbianzubeifen1 icon size-16" bindtap="editOption" data-index="{{index}}"></view>
+                <input placeholder="选项" type="text" value="{{item.text}}" maxlength="100" bindinput="enterText" data-key="form.options[{{index}}].text"/>
+            </view>
+            <view class="add flex-row" bindtap="editOption">
+                <view class="iconfont iconbianzubeifen icon size-16"></view>
+                <view class="label">添加选项</view>
+            </view>
+        </view>
+        <view class="type-and-date bg-white size-15">
+            <view class="type flex-row">
+                <view class="label">投票类型</view>
+                <picker value="{{index}}" range="{{typeArr}}" bindchange="typeChange">
+                    <view class="text-gray">{{typeArr[form.type]}}</view>
+                </picker>
+            </view>
+                <view class="end-time flex-row">
+                <view class="label">截至日期</view>
+                <picker value="{{form.end_time}}" mode="date" bindtap="timeChangeTest" bindchange="dateChange">
+                    <view class="text-gray">{{form.end_time}}</view>
+                </picker>
+                 <picker value="{{form.end_hours}}" mode="time" bindtap="timeChangeTest" bindchange="timeChange">
+                    <view class="text-gray">{{form.end_hours}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="footer-button text-white bg-orange size-16" bindtap="submit" data-path="/pages/detail/detail"> 完成 </view>
+</view>

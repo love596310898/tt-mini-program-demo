@@ -1,0 +1,80 @@
+@import "icon-font/icon.ttss";
+html, body, view{
+    font-family: PingFangSC-Regular,PingFang SC !important;
+}
+
+.PingFang-medium{
+    font-family: PingFangSC-Medium,PingFang SC !important;
+}
+
+.text-orange{
+    color: #F1803A
+}
+
+.text-gray{
+    color: #999999
+}
+.text-white{
+    color: #FFFFFF
+}
+.text-black{
+    color: #333333
+}
+.bg-orange{
+    background: #F1803A
+}
+.bg-white{
+    background: #FFFFFF
+}
+
+.bg-grey{
+    background: #F3F4F6
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row
+}
+.flex-column{
+    display: flex;
+    flex-direction: column
+}
+.size-18{
+    font-size: 36rpx; 
+}
+.size-16{
+    font-size: 32rpx;
+}
+.size-15{
+    font-size: 30rpx;
+}
+.size-14{
+    font-size: 28rpx;
+}
+.size-13{
+    font-size: 26rpx;
+}
+.size-11{
+  font-size: 22rpx;  
+}
+.wrap{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 100rpx; 
+    padding-top: 4rpx;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06) inset;
+}
+.container{
+    height: 100%;
+    overflow-y: scroll;
+}
+.footer-button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 100rpx;
+    text-align: center
+}
