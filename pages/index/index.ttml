@@ -1,26 +1,2 @@
 <view class="bg-grey wrap">
-    <view class="container">
-        <view tt:if="{{voteList.length === 0 && !isLoading}}" class="bg-white text-gray size-15 info">还没有投票哦～先创建一份吧</view>
-        <view tt:if="{{voteList.length > 0 && !isLoading}}">
-            <view class="veto-item bg-white" tt:for="{{voteList}}" tt:key="index">
-                <view class="item-top">
-                    <view class="tiele-and-count flex-row">
-                        <view class="title PingFang-medium size-15">{{item.title}} </view>
-                        <view class="type-style size-13">{{item.type === 1? "[多选]": "[单选]"}}</view>
-                        <view class="count size-13">{{item.total_number}}</view>
-                    </view>
-                    <view class="format-date text-gray size-11 flex-row">
-                        <view>{{item.start_time}}</view>
-                        <view>{{item.end_time_text}}</view>
-                    </view>
-                </view>
-                <view class="item-bottom size-14 text-orange flex-row">
-                    <view data-path="/pages/detail/detail?id={{item.id}}&type=view" bindtap="pathTo"> 查看 </view>
-                    <view data-path="/pages/create/create?id={{item.id}}&type=view" data-index="{{index}}" bindtap="editVote"> 编辑 </view>
-                    <view data-id="{{item.id}}" bindtap="deleteVote"> 删除 </view>
-                </view>
-            </view>
-        </view>
-    </view>
-    <view class="footer-button bg-orange text-white size-16" bindtap="pathTo" data-path="/pages/create/create?type=create"> 新增投票 </button>
 </view>
